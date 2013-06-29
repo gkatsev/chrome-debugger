@@ -1,0 +1,23 @@
+{
+  "name": "chrome-debugger",
+  "version": "0.0.1",
+  "description": "An node.js interface to chrome remote debugging protocol",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/gkatsev/chrome-debugger"
+  },
+  "keywords": [
+    "chrome",
+    "debug",
+    "remote"
+  ],
+  "author": "Gary Katsevman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gkatsev/chrome-debugger/issues"
+  }
+}
