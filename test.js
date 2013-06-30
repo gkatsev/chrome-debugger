@@ -11,12 +11,15 @@ cd.runtime.evaluate('var foo = {a:5}; foo', function(err, res) {
     if (err) return;
 
     console.log('properties!', res);
-    process.exit(0);
   });
 });
 
-//var repl = require('repl');
-//var local = repl.start();
-//local.context.repl = local;
-//local.context.cd = cd;
-//local.context.wsurl = wsurl;
+var repl = require('repl');
+var local = repl.start({
+  prompt: '> ',
+  input: process.stdin,
+  output: process.stdout
+});
+local.context.repl = local;
+local.context.cd = cd;
+local.context.wsurl = wsurl;
