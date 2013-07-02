@@ -13,6 +13,15 @@ cd.runtime.evaluate({
 
   var remoteObjId = res.objectId
 
+  cd.runtime.callFunctionOn({
+    objectId: remoteObjId,
+    functionDeclaration: 'function() { return this.a; }'
+  }, function(err, res) {
+    if (err) return;
+
+    console.log('called on', res);
+  });
+
   cd.runtime.getProperties(remoteObjId, true, function(err, res) {
     if (err) return;
 
