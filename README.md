@@ -14,6 +14,7 @@ cd.runtime.evaluate('5', console.log.bind(console));
 
     * `runtime` - The [runtime](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime)
         * `evaluate` - (expression, [, returnByValue [, callback]]), [evaluates](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-evaluate) the expression on the page.
+        * `getProperties` - (remoteObjectId [, ownProperties [, callback]]), [returns the properties](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-getProperties) of the given remote object
 
 ## Developing
 ```sh
