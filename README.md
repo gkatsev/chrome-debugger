@@ -13,13 +13,13 @@ cd.runtime.evaluate('5', console.log.bind(console));
 * `require('chrome-debugger')` - This returns a function that given a websocket endpoint for chrome, will return an object that can talk the debugger protocol.
 
     * `runtime` - The [runtime](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime)
-        * `evaluate` - (options, [, callback]), [evaluates](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-evaluate) the expression on the page.
+        * `evaluate` - `(options, [, callback])`, [evaluates](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-evaluate) the expression on the page.
             * `options`
                 * `expression` - [required] The expression to evaluate
                 * `objectGroup` - [optional] Symbolic group name to release objects
                 * `returnByValue` - [optional] Should the return be returned by value, for example, JSON
-        * `getProperties` - (remoteObjectId [, ownProperties [, callback]]), [returns the properties](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-getProperties) of the given remote object
-        * `releaseObject` - (remoteObjectId, [, callback]), [releases a remote object](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-releaseObject)
+        * `getProperties` - `(remoteObjectId [, ownProperties [, callback]])`, [returns the properties](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-getProperties) of the given remote object
+        * `releaseObject` - `(remoteObjectId, [, callback])`, [releases a remote object](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-releaseObject)
 
 ## Developing
 ```sh
