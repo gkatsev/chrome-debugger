@@ -12,8 +12,8 @@ cd.runtime.evaluate('5', console.log.bind(console));
 
 * `require('chrome-debugger')` - This returns a function that given a websocket endpoint for chrome, will return an object that can talk the debugger protocol.
 
-    * 'runtime' - The [runtime](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime)
-        * `evaluate` - (expression, [, callback]), [evaluates](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-evaluate) the expression on the page.
+    * `runtime` - The [runtime](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime)
+        * `evaluate` - (expression, [, returnByValue [, callback]]), [evaluates](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-evaluate) the expression on the page.
 
 ## Developing
 ```sh
