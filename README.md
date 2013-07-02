@@ -20,6 +20,7 @@ cd.runtime.evaluate('5', console.log.bind(console));
                 * `returnByValue` - [optional] Should the return be returned by value, for example, JSON
         * `getProperties` - `(remoteObjectId [, ownProperties [, callback]])`, [returns the properties](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-getProperties) of the given remote object
         * `releaseObject` - `(remoteObjectId, [, callback])`, [releases a remote object](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-releaseObject)
+        * `releaseObjectGroup` - `(objectGroup, [, callback])`, [releases a remote objectgroup](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-releaseObjectGroup)
 
 ## Developing
 ```sh
