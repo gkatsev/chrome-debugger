@@ -13,6 +13,12 @@ cd.runtime.evaluate('5', console.log.bind(console));
 * `require('chrome-debugger')` - This returns a function that given a websocket endpoint for chrome, will return an object that can talk the debugger protocol.
 
     * `runtime` - The [runtime](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime)
+        * `callFunctionOn` - `(options, [, callback])`, [](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-evaluate) the expression on the page.
+            * `options`
+                * `objectId` - [required] object to call function on
+                * `functionDeclaration` - [required] declaration of the function as a string
+                * `arguments` - [optional] arguments to give to the call. Objects need to be remote objects as well
+                * `returnByValue` - [optional] Should the return be returned by value, for example, JSON
         * `evaluate` - `(options, [, callback])`, [evaluates](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-evaluate) the expression on the page.
             * `options`
                 * `expression` - [required] The expression to evaluate
