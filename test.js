@@ -7,10 +7,18 @@ cd.runtime.evaluate('var foo = {a:5}; foo', function(err, res) {
 
   console.log("eval done", res);
 
-  cd.runtime.getProperties(res.objectId, true, function(err, res) {
+  var remoteObjId = res.objectId
+
+  cd.runtime.getProperties(remoteObjId, true, function(err, res) {
     if (err) return;
 
     console.log('properties!', res);
+
+    cd.runtime.releaseObject(remoteObjId, function(err, res) {
+      if (err) return;
+
+      console.log('released!', res);
+    });
   });
 });
 
