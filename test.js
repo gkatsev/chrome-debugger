@@ -2,7 +2,10 @@ var wsurl = process.argv[2] || 'ws://localhost:9222/devtools/page/65705C35-F263-
 console.log(wsurl);
 var cd = require('./index.js')(wsurl);
 
-cd.runtime.evaluate('var foo = {a:5}; foo', function(err, res) {
+cd.runtime.evaluate({
+  expression: 'var foo = {a:5}; foo',
+  objectGroup: '999'
+}, function(err, res) {
   if (err) return;
 
   console.log("eval done", res);
