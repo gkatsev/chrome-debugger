@@ -8,6 +8,8 @@ cd.runtime.evaluate('5', console.log.bind(console));
 // 5
 ```
 
+Also, see [test.js](./test.js).
+
 ## API
 
 * `require('chrome-debugger')` - This returns a function that given a websocket endpoint for chrome, will return an object that can talk the debugger protocol.
