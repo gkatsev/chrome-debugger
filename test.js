@@ -42,7 +42,7 @@ cd.runtime.evaluate({
 });
 
 cd.runtime.evaluate({
-  expression: 'var a = 0; setTimeout(function() {console.log(a++);}, 1000)'
+  expression: 'var a = 0; setInterval(function() {console.log(a++);}, 1000)'
 }, function(err, res) {
   if (err) return;
 
