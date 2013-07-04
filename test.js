@@ -41,6 +41,18 @@ cd.runtime.evaluate({
   });
 });
 
+cd.runtime.evaluate({
+  expression: 'var a = 0; setTimeout(function() {console.log(a++);}, 1000)'
+}, function(err, res) {
+  if (err) return;
+
+  cd.console.enable(function(err) {
+    if (err) return;
+
+    console.log('remote console enabled');
+  });
+});
+
 var repl = require('repl');
 var local = repl.start({
   prompt: '> ',
