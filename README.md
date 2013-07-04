@@ -14,6 +14,10 @@ Also, see [test.js](./test.js).
 
 * `require('chrome-debugger')` - This returns a function that given a websocket endpoint for chrome, will return an object that can talk the debugger protocol.
 
+    * [`console`](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/console) - By enabling the console, you can listen to messages from the console
+        * [`clearMessages`](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/console#command-clearMessages) - Clears the console
+        * [`disable`](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/console#command-disable) - Disable the console to stop receiving messages
+        * [`enable`](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/console#command-enable) - Enable the console to start receiving messages
     * [`runtime`](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime) - The runtime
         * [`callFunctionOn`](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-callFunctionOn) - `(options, [, callback])`, [](https://developers.google.com/chrome-developer-tools/docs/protocol/1.0/runtime#command-evaluate) the expression on the page.
             * `options`
