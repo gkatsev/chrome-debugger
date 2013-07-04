@@ -9,4 +9,4 @@ module.exports = function(wsurl) {
     console: rconsole(ws),
     runtime: runtime(ws)
   }
-}
+};
