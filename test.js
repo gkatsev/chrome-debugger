@@ -46,9 +46,11 @@ cd.runtime.evaluate({
 }, function(err, res) {
   if (err) return;
 
-  cd.console.enable(function(message) {
+  console.log(cd.console);
+  cd.console.on('Console.messageAdded',function(message) {
     console.log('console enable message callback', err, message);
-  }, function(err) {
+  });
+  cd.console.enable(function(err) {
     if (err) return;
 
     console.log('remote console enabled');
