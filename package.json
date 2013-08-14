@@ -21,6 +21,7 @@
     "url": "https://github.com/gkatsev/chrome-debugger/issues"
   },
   "dependencies": {
-    "ws": "~0.4.27"
+    "ws": "~0.4.27",
+    "q": "~0.9.6"
   }
 }
